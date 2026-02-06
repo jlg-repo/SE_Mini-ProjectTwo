@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  width: 99vw;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: full;
+  height: auto;
+  padding: 20px;
+  padding-top: 100px; /* to avoid navbar overlap */
+  /* border: 1px solid black; */
+  background: linear-gradient(180deg, #fff7e6 0%, #f1e0d2 45%, #ffffff 100%);
+  color: #2b1b14;}
+p {
+  line-height: 1.6;
+  padding:2px; /* Sets line spacing to 1.6 times the font size */
+}
+.navbar {
+  position: fixed; /* helps keep the navbar stick to top*/
+  top: 0; /* helps keep the navbar stick to top*/
+  z-index: 999; /* Keeps navbar above other content */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  background: rgb(236, 238, 247); /* Optional background */
+  border-radius: 12px;
+  margin: 10px auto;
+  box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.2); /* h v blur spread color */
+}
+
+.Header { 
+  text-align: center; 
+}
+
+
+.horizontal-menu {
+  display: flex; /* Aligns items in a row */
+  list-style: none; /* Removes bullet points */
+  padding: 0; /* Removes default padding */
+  margin: 0; /* Removes default margin */
+}
+.vertical-menu {
+  display: flex; /* Aligns items in a col */
+  flex-direction: column;
+  list-style: none; /* Removes bullet points */
+  padding: 0; /* Removes default padding */
+  margin: 0; /* Removes default margin */
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background-color: aliceblue;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.1),
+    0 6px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card img {
+  /* Essential image styles */
+  width: 290px; /* Image takes the full width of the card container */
+  height: 300px; /* Example fixed height for uniform cards */
+  object-fit: cover; /* Crops the image to cover the area while maintaining aspect ratio */
+
+  /* Optional: Round the top corners of the image to match the card */
+  border-top-left-radius: 8px;
+  border-top-right-radius: 80px;
+}
+
+
+button {
+  display: inline-block; /* Allows padding and margin, and keeps it inline */
+  padding: 10px 10px ; /* Space between text and border (top/bottom, left/right) */
+  margin: 4px;
+  text-align: center; /* Center the text */
+  text-decoration: none; /* Remove underlines from <a> tags */
+
+  /* Color and background */
+  background-color: lightblue;
+  color: black; /* White text color */
+
+  /* Font and appearance */
+  font-size: 16px; /* Increase font size */
+  cursor: pointer; /* Change mouse cursor to a hand on hover */
+  border: none; /* Remove default border */
+  border-radius: 8px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+cardButton{
+    color: black; /* Temp Color for non-empty */
+/** 
+Need to add style to make this nicer
+**/
+}
+
+button:hover {
+  /* Hover effect: changes background color when the user hovers over the button */
+
+  background-color: #008cba; /* A different color on hover */
+}
+
+.HistorySection{
+padding: 8px;
+flex-direction: column;
+}
+
+.main-font{
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  text-align: center;
+}
+
+header{
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* for mobile or thin windows on desktop */
+@media screen and (max-width: 768px) {
+  body {
+    width: 90%;
+    margin: 0 auto;
+    padding: 5px; /* auto doesn't work here, needs values*/
+    padding-top: 100px; /* to avoid navbar overlap */
+  }
+  .horizontal-menu li {
+    padding: 5px ; /* less padding, equal padding on all sides */
+  }
+
+  .banner {
+    width: fit-content;
+    display: flex; /* Hide an element on small screens */
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+  .banner-image {
+    width: 90vw; /* tunable to taste?*/
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px;
+    padding: 5px; /* equal gap and padding */
+  }
+
+  .footer {
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr;
+    padding: 10px;
+    gap: 10px;
+  }
+}
