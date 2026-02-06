@@ -20,8 +20,12 @@ function RemoveFromCart(index) {
  console.log(index);
 }
 function DisplayCartItems(){
+
+    
     console.log("Accesing Cart")
     const divContainer = document.getElementById("CartItems");
+    divContainer.innerHTML = "";
+    
     for (var i=0; i <CartArray.length;++i){
         console.log(CartArray)
             const p = document.createElement("p");
