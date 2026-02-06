@@ -1,4 +1,9 @@
 
+ 
+ // TODO: Cart counter, total price in cart, live cart maybe, second click on cart should close it if live cart, unified styling of buttons
+ // TODO: README.md. Check rubric for requirements
+
+ 
  NameArray = new Array("Croissant","Eclair","LemonBar","Muffin")
  ImageArray = new Array("")
  CartArray = new Array()
@@ -25,6 +30,9 @@ function DisplayCartItems(){
     console.log("Accesing Cart")
     const divContainer = document.getElementById("CartItems");
     divContainer.innerHTML = "";
+    // TODO: Fix boolean display issue when cart = 0
+    // TODO: Investigate live cart updating
+    // TODO: Create new class for remove button and clear button to change their styling together
     
     for (var i=0; i <CartArray.length;++i){
         console.log(CartArray)
