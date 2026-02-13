@@ -1,3 +1,4 @@
+## Mini Project Two - Papa m's Makery
 The Idea is it's just a bakery's website.
 First we have our generic baker man to greet the user.
 Secondly we have our Navbar for future or potential Navigation to pages, such as detailed pages on each baked good.
@@ -8,7 +9,9 @@ and lastly a footer for Times and Contact information.
 
 https://zippy-druid-c996a0.netlify.app
 Live Site
-
+## Made By: ##
+Hayden Jones &
+Jason Gentile
 ## Design Choices ##
 
 - Color Palette: Warm gradient background 
@@ -39,3 +42,5 @@ The "@media screen and (max-width: 768px)" section adjusts layout for mobile dev
 - Changes card grid from 3 columns to 1 column
 - Reduces padding and gaps
 - Ensures navbar doesn't overlap content
+### Importance of DOM elements
+The Cart and Cart actions are important for the functionality of any website, without functions to edit and access Text via ID or other means then a website would be unable to DO anything and instead be a Page to view and only to view.
