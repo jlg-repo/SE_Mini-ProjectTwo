@@ -10,10 +10,10 @@
  // id is the index of the product in the array, name is the name of the product, price is the price of the product, image is the image of the product, and description is the description of the product
  // this can be used for cards, and by the cart to display the name, price, and image of the product in the cart
  const PRODUCTS = [
-    {id: "croissant", name: "Croissant", price: 3.00, image: "./images/croissant.jpg", desc: "Flaky and buttery, our croissants are made fresh daily."},
-    {id: "eclair", name: "Eclair", price: 2.50, image: "./images/eclair.jpg", desc: "Chocolate eclair. Pretty tasty."},
-    {id: "lemonbar", name: "Lemon Bar", price: 2.00, image: "./images/lemonbar.jpg", desc: "For those days when you want something sweet but you don't want something sweet."},
-    {id: "muffin", name: "Muffin", price: 2.75, image: "./images/muffin.jpg", desc: "For those times when you're hungry but you don't know what you want to eat."}
+    {id: "croissant", name: "Croissant", price: 3.00, image: "./croissant.jpg", desc: "Flaky and buttery, our croissants are made fresh daily."},
+    {id: "eclair", name: "Eclair", price: 2.50, image: "./eclair.jpg", desc: "Chocolate eclair. Pretty tasty."},
+    {id: "lemonbar", name: "Lemon Bar", price: 2.00, image: "./lemonbar.jpg", desc: "For those days when you want something sweet but you don't want something sweet."},
+    {id: "muffin", name: "Muffin", price: 2.75, image: "./muffin.jpg", desc: "For those times when you're hungry but you don't know what you want to eat."}
  ]
 
  
@@ -178,6 +178,22 @@ function renderHistory() {
     html += "<p class='history-entry'>" + entry + "</p>";
   }
   container.innerHTML = html;
+}
+
+function generateCards() {
+    const container = document.querySelector(".cards");
+    PRODUCTS.forEach((product) => {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
+            <img src="${product.image}" alt="${product.name}">
+            <p>${product.name} - $${product.price.toFixed(2)}<br><br>${product.desc}</p>
+            <button class="cardButton" data-id="${product.id}" onclick="addToCart(this)">
+                Add to Cart
+            </button>
+        `;
+        container.appendChild(card);
+    });
 }
 
 generateCards();

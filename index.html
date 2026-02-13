@@ -22,13 +22,12 @@
                     </button>
                 </li>
                 <li>
-                    <button onClick="DisplayCartItems()">
+                    <button id="cartToggle" onclick="openCart()">
                     Cart
+                    <span class = "cart-badge" id="cartBadge">0</span>
                     </button>
                 </li>
                 </ul>
-                <div id="CartItems">
-                </div>
             </nav>
         </section>
 
@@ -59,82 +58,8 @@
             <h3 class="Header">
                 Our Wonderful Selection of Goods
             </h3>
-            <div class="cards">
-                <!--
-                This is a Box/Card Holder
-                -->
-      
-                <div class="card">
-                <!--
-                    This is a Card
-                -->
-                    <img src="./croissant.jpg" alt="Croissant">
-                              <p class="p">
-                    Croissant - $3
-                    <br>
-                    <br>
-                    Flaky and buttery, our croissants are made fresh daily.
-                </p>
-                <button class = "cardButton" onClick="AddToCart(this.id)" id="0">
-                    <p>
-                        Add to Cart
-                    </p>
-                </button>
-
-                </div>
-                <div class="card">
-                           <!--
-                    This is a Card
-                -->
-                                        <img src="./eclair.jpg" alt="Eclair">
-                              <p class="p">
-                    Eclair - $4
-                    <br>
-                    <br>
-
-                    Chocolate eclair. Pretty tasty.
+            <div class="cards"> <!-- Cards empty, generateCards() in script.js fills them-->
                 
-                </p>
-                                    <button class = "cardButton"  onClick="AddToCart(this.id)" id="1">
-                    <p>
-                        Add to Cart
-                    </p>
-                </button>
-                </div>
-                <div class="card">
-                           <!--
-                    This is a Card
-                -->                    <img src="./lemonbar.jpg" alt="Lemon Bar">
-                              <p class="p">
-                    Lemon Bar - $3.50
-
-                    <br>
-                    <br>
-                    For those days when you want something sweet but you don't want something sweet.
-                </p>
-                                <button class = "cardButton"  onClick="AddToCart(this.id)" id="2">
-                    <p>
-                        Add to Cart
-                    </p>
-                </button>
-                </div>
-                <div class="card">
-                         <!--
-                    This is a Card
-                -->  
-                                        <img src="./muffin.jpg" alt="Muffin">
-                              <p class="p">
-                    Muffin - $3.25
-                    <br>
-                    <br>
-                    For those times when you're hungry but you don't know what you want to eat.  
-                </p>
-                                <button class = "cardButton" onClick="AddToCart(this.id)" id="3">
-                    <p>
-                        Add to Cart
-                    </p>
-                </button>
-                </div>
             </div>
         </section>
 
@@ -142,6 +67,42 @@
   <p class="main-font">Hours: Mon–Sat 7am–6pm • 9200 Iowa Lane</p>
   <p class="main-font">Contact: papam@example.com</p>
 </section>
+<!-- Overlay: dims the page behind the open drawer-->
+ <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+
+ <!-- Cart Drawer-->
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer-header">
+      <h2>Your Cart</h2>
+      <button class="cart-close-btn" onclick="closeCart()">x</button>
+      </div>
+
+      <!-- Updates on every cart change via renderCart() -->
+        <p id="cartItemCount" class="cart-item-count">Your cart is empty</p>
+
+        <!-- Item rows injected here by renderCart() -->
+        <div class="cart-drawer-items" id="cartDrawerItems"></div>
+
+        <div class="cart-drawer-footer">
+            <div class="cart-total-row">
+                <span>Total</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <button class="cart-checkout-btn" id="cartCheckoutBtn" disabled>Checkout</button>
+            <button class="cart-clear-btn" onclick="clearCart()">Clear Cart</button>
+        </div>
+
+        <!-- History section -->
+        <div class="cart-history-section">
+            <div class="cart-history-header">
+                <span>Action History</span>
+                <button class="cart-clear-history-btn" onclick="clearHistory()">Clear History</button>
+            </div>
+            <!-- History entries injected here by renderHistory() -->
+            <div class="cart-history-items" id="cartHistory"></div>
+        </div>
+
+    </aside>
 
     <script src="./script.js"></script>
 
