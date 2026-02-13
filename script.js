@@ -109,7 +109,7 @@ function renderCart() {
     checkoutBtn.disabled = totalQty === 0; // fancy Copilot autocomplete here, disable checkout button if cart is empty
 
     if (entries.length === 0) { // rebuild the cart with an empty message if there's nothing in it
-        itemsContainer.innerHTML = '<p class="cart-empty-msg">Your cart is empty. Add something to get started.</p>'; // show empty message if no items
+        itemsContainer.innerHTML = '<p class="cart-empty-msg">Add something to get started.</p>'; // show empty message if no items
         return;
     }
 
