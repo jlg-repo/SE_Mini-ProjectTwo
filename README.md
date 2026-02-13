@@ -7,7 +7,7 @@ Fourthly the location, random place Iowa.
 Then the available baked goods.
 and lastly a footer for Times and Contact information.
 
-https://zippy-druid-c996a0.netlify.app
+[https://zippy-druid-c996a0.netlify.app](https://mini-projecttwo.netlify.app)
 Live Site
 ## Made By: ##
 Hayden Jones &
