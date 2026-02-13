@@ -8,7 +8,11 @@ Then the available baked goods.
 and lastly a footer for Times and Contact information
 and a drawer-style cart implementation
 
-[https://zippy-druid-c996a0.netlify.app](https://mini-projecttwo.netlify.app)
+DEAD LINK - [https://zippy-druid-c996a0.netlify.app](https://mini-projecttwo.netlify.app)
+
+New link since netlify decided to eat all of our credits and shut the site down
+https://seminiproject2.netlify.app/
+
 Live Site
 ## Made By: ##
 Hayden Jones &
